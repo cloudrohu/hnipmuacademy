@@ -23,17 +23,20 @@ urlpatterns = [
     path('projects/<slug:slug>/', ProjectDetailView.as_view(), name='project_detail'),
 
     # Campaigns
-    path('campaigns/', CampaignListView.as_view(), name='campaign_list'),
-    path('campaigns/<slug:slug>/', CampaignDetailView.as_view(), name='campaign_detail'),
-    path('campaigns/<slug:slug>/donate/', CampaignDonateView.as_view(), name='campaign_donate'),
+    path('trainingprogram/', CampaignListView.as_view(), name='trainingprogram'),
+    path('trainingprogram/<slug:slug>/', CampaignDetailView.as_view(), name='trainingprogram_detail'),
+
+
+    # hnipmuexclusive
+    path('hnipmuexclusive/', DonateView.as_view(), name='hnipmuexclusive'),
+    path('hnipmuexclusive/<slug:slug>/donate/', CampaignDonateView.as_view(), name='hnipmuexclusive_detail'),
 
     # Events
     path('events/', EventListView.as_view(), name='event_list'),
     path('events/<int:pk>/', EventDetailView.as_view(), name='event_detail'),
     path('events/<int:pk>/register/', EventRegisterView.as_view(), name='event_register'),
 
-    # Donate & Volunteer
-    path('donate/', DonateView.as_view(), name='donate'),
+    
     path('volunteer/', VolunteerView.as_view(), name='volunteer'),
     path('volunteer/apply/', VolunteerApplyView.as_view(), name='volunteer_apply'),
 
@@ -48,7 +51,7 @@ urlpatterns = [
     # Misc
     path('faq/', FAQView.as_view(), name='faq'),
     path('testimonials/', TestimonialView.as_view(), name='testimonials'),
-    path('partners/', PartnerView.as_view(), name='partners'),
+    path('treatments/', PartnerView.as_view(), name='treatments'),
     path('locations/', LocationView.as_view(), name='locations'),
 
     # Staff dashboard

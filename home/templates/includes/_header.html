@@ -19,15 +19,15 @@
             <nav class="hidden lg:flex items-center gap-10 font-medium">
 
                 <a class="nav-desktop" href="/">Home</a>
-                <a class="nav-desktop" href="{% url 'home:about' %}">About</a>
-                <a class="nav-desktop" href="{% url 'home:partners' %}">Partners</a>
-                <a class="nav-desktop" href="{% url 'home:event_list' %}">Events</a>
-                <a class="nav-desktop" href="{% url 'home:campaign_list' %}">Campaign</a>
+                <a class="nav-desktop" href="{% url 'home:treatments' %}">Treatments</a>
+                <a class="nav-desktop" href="{% url 'home:testimonials' %}">Testimonials</a>
+                <a class="nav-desktop" href="{% url 'home:trainingprogram' %}">Training Program</a>
                 <a class="nav-desktop" href="{% url 'home:gallery' %}">Gallery</a>
+                <a class="nav-desktop" href="{% url 'home:about' %}">About</a>
                 <a class="nav-desktop" href="{% url 'home:contact' %}">Contact</a>
 
-                <a href="{% url 'home:donate' %}" class="donate-btn">
-                    Donate
+                <a href="{% url 'home:hnipmuexclusive' %}" class="donate-btn">
+                     HNIPMU EXCLUSIVE
                 </a>
             </nav>
             
@@ -61,6 +61,8 @@
             <h2 class="text-2xl font-bold text-red-700 mb-4">Menu</h2>
 
             <!-- MENU LINKS -->
+
+            
             <div class="flex flex-col mt-2">
 
                 <a href="{% url 'home:index' %}"
@@ -68,29 +70,32 @@
                     <i class="fa-solid fa-house text-red-600"></i> Home
                 </a>
 
-                <a href="{% url 'home:about' %}"
+                
+
+                <a href="{% url 'home:treatments' %}"
                 class="flex items-center gap-3 text-lg font-medium text-white py-3 border-b border-gray-300 hover:text-red-600">
-                    <i class="fa-solid fa-circle-info text-red-600"></i> About
+                    <i class="fa-solid fa-heart text-red-600"></i> Treatments
                 </a>
 
-                <a href="{% url 'home:partners' %}"
+                <a href="{% url 'home:testimonials' %}"
                 class="flex items-center gap-3 text-lg font-medium text-white py-3 border-b border-gray-300 hover:text-red-600">
-                    <i class="fa-solid fa-heart text-red-600"></i> Partners
+                    <i class="fa-solid fa-calendar-days text-red-600"></i> Testimonials
                 </a>
 
-                <a href="{% url 'home:event_list' %}"
+                <a href="{% url 'home:trainingprogram' %}"
                 class="flex items-center gap-3 text-lg font-medium text-white py-3 border-b border-gray-300 hover:text-red-600">
-                    <i class="fa-solid fa-calendar-days text-red-600"></i> Events
-                </a>
-
-                <a href="{% url 'home:campaign_list' %}"
-                class="flex items-center gap-3 text-lg font-medium text-white py-3 border-b border-gray-300 hover:text-red-600">
-                    <i class="fa-solid fa-bullhorn text-red-600"></i> Campaigns
+                    <i class="fa-solid fa-bullhorn text-red-600"></i> Training program
                 </a>
 
                 <a href="{% url 'home:gallery' %}"
                 class="flex items-center gap-3 text-lg font-medium text-white py-3 border-b border-gray-300 hover:text-red-600">
                     <i class="fa-solid fa-image text-red-600"></i> Gallery
+
+                </a>
+
+                <a href="{% url 'home:about' %}"
+                class="flex items-center gap-3 text-lg font-medium text-white py-3 border-b border-gray-300 hover:text-red-600">
+                    <i class="fa-solid fa-circle-info text-red-600"></i> About
                 </a>
 
                 <a href="{% url 'home:contact' %}"
@@ -98,9 +103,9 @@
                     <i class="fa-solid fa-phone text-red-600"></i> Contact
                 </a>
 
-                <a href="{% url 'home:donate' %}"
+                <a href="{% url 'home:hnipmuexclusive' %}"
                 class="mt-6 text-center bg-red-600 text-white text-lg font-semibold px-5 py-3 rounded-full shadow hover:bg-red-700">
-                    Donate
+                    HNIPMU EXCLUSIVE
                 </a>
 
             </div>
