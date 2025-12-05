@@ -11,7 +11,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import (
     Project, NewsPost, Campaign, Event, ContactMessage, Donation,
     Volunteer, GalleryImage, FAQ, Testimonial, Partner, ImpactMetric, Location, SocialLink,CarouselSlide ,Profile,
-    SiteSetting,Highlight,
+    SiteSetting,Highlight,AboutPageContent
 )
 from .forms import ContactForm, DonationForm, VolunteerForm, EventRegistrationForm
 
@@ -71,6 +71,7 @@ class HomeView(View):
         highlights = Highlight.objects.filter(is_active=True).order_by('order')
         social_links = SocialLink.objects.filter(is_visible=True)
         slides = CarouselSlide.objects.filter(is_active=True).order_by('order')[:10]  # NEW
+        about_content = AboutPageContent.objects.order_by('-id').first()                                                         
 
         context = {
 
@@ -84,6 +85,7 @@ class HomeView(View):
             'gallery': gallery,
             'social_links': social_links,
             'slides': slides,   # pass to template
+            'about_content': about_content,  
         }
         return render(request, self.template_name, context)
 
